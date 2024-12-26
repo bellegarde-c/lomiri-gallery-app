@@ -16,15 +16,11 @@ override_dh_auto_configure:
 override_dh_install:
 	# drop Ubuntu Touch migration script
 	rm debian/tmp/usr/share/lomiri-gallery-app/lomiri-gallery-app-migrate.py
-
 	dh_install
 	dh_apparmor -plomiri-gallery-app --profile-name=lomiri-gallery-app
 
 override_dh_missing:
 	dh_missing --fail-missing
-
-override_dh_auto_test:
-	QT_QPA_PLATFORM=minimal CTEST_OUTPUT_ON_FAILURE=1 dh_auto_test
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=..
