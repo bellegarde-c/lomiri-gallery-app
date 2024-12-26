@@ -1,4 +1,4 @@
-lomiri-gallery-app (3.1.0-2) unstable; urgency=medium
+lomiri-gallery-app (3.1.1-1) unstable; urgency=medium
 
   * debian/:
     + Enable user-session-migration debhelper feature and provide lomiri-
